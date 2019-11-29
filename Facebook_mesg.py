@@ -9,9 +9,6 @@ top_10_sender_value_counts.plot.barh(stacked=True)
 null_senders_df = df[df['Sender'].isnull()]
 null_senders_df.head()
 
-khelbi = df[df['Message'] == 'heda']
-print(khelbi.head())
-
 df['Letter_Count'] = df['Message'].apply(lambda s : len(s))
 df['Word_Count'] = df['Message'].apply(lambda s : len(s.split(' ')))
 df['Letter_Count'].sum(), df['Word_Count'].sum()
